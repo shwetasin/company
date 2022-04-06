@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    <form action="" method='POST'>
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type='email' name='email'></td>
+            </tr>
+            <tr>
+                <td>UserName</td>
+                <td><input type='text' name='username'></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type='password' name='password'></td>
+            </tr>
+            <tr>
+                <td>Time_in</td>
+                <td><input type="datetime-local" name="intime"></td>
+            </tr>
+            <tr>
+                <td>Time_out</td>
+                <td><input type="datetime-local" name="outtime"></td>
+            </tr>
+        </table>
+        <p>
+            <input type='submit' value="Register"/>
+        </p>
+    </form>
+
+    <h3>ALready Have an Account?</h3>
+    <h3><a href="{{url_for('login')}}">Login</a></h3>
+</center>
+{% endblock %}
